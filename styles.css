@@ -1,0 +1,47 @@
+:root {
+    /* Colors */
+    --colors-white: hsl(0, 0%, 100%);
+    --colors-stone-100: hsl(30, 54%, 90%);
+    --colors-stone-150: hsl(30, 18%, 87%);
+    --colors-stone-600: hsl(30, 10%, 34%);
+    --colors-stone-900: hsl(24, 5%, 18%);
+    --colors-brown-800: hsl(14, 45%, 36%);
+    --colors-rose-800: hsl(332, 51%, 32%);
+    --colors-rose-50: hsl(330, 100%, 98%);
+
+    /* Typography */
+    --font-family-content:'Outfit', sans-serif;
+    --font-family-title:'Young Serif', sans-serif;
+}
+
+    /* Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-content);
+    font-size: 1rem;
+    background-color: var(--colors-stone-100);
+    min-height: 100vh;
+    padding: 1.5rem;
+
+}
