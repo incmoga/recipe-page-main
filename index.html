@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Recipe page</title>
 </head>
 <body>
@@ -24,9 +25,12 @@
         <section class="prep-time">
           <h3 class="prep-time__tittle">Preparation time</h3>
           <ul class="prep-time__list">
-            <li class="prep-time__item">Total: Approximately 10 minutes</li>
-            <li class="prep-time__item">Preparation: 5 minutes</li>
-            <li class="prep-time__item">Cooking: 5 minutes</li>
+            <li class="prep-time__item">
+              <span class="prep-time__label">Total:</span> Approximately 10 minutes</li>
+            <li class="prep-time__item">
+              <span class="prep-time__label">Preparation:</span> 5 minutes</li>
+            <li class="prep-time__item">
+              <span class="prep-time__label">Cooking:</span> 5 minutes</li>
           </ul>
         </section>
         <section class="ingredients">
@@ -42,16 +46,22 @@
         <section class="instructions">
           <h2 class="instructions">Instructions</h2>
           <ol class="instructions__list">
-            <li class="instructions__item">Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+            <li class="instructions__item">
+              <span class="instructions__step">Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
               You can add a tablespoon of water or milk for a fluffier texture.</li>
-            <li class="instructions__item">Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.</li>
-            <li class="instructions__item">Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+            <li class="instructions__item">
+              <span class="instructions__step">Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+            <li class="instructions__item">
+              <span class="instructions__step">Cook the omelette:</span> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
               the eggs evenly coat the surface.</li>
-            <li class="instructions__item">Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
+            <li class="instructions__item">
+              <span class="instructions__step">Add fillings (optional):</span> When the eggs begin to set at the edges but are still slightly runny in the 
               middle, sprinkle your chosen fillings over one half of the omelette.</li>
-            <li class="instructions__item">Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
+            <li class="instructions__item">
+              <span class="instructions__step">Fold and serve:</span> As the omelette continues to cook, carefully lift one edge and fold it over the 
               fillings. Let it cook for another minute, then slide it onto a plate.</li>
-            <li class="instructions__item">Enjoy: Serve hot, with additional salt and pepper if needed.</li>
+            <li class="instructions__item">
+              <span class="instructions__step">Enjoy:</span> Serve hot, with additional salt and pepper if needed.</li>
           </ol>
         </section>
         <section class="nutrition">
@@ -62,19 +72,19 @@
           <table class="nutrition">
             <tbody>
               <tr class="nutrition__row">
-                <td class="nutrition__value">Calories</td>
+                <th class="nutrition__label">Calories</td>
                 <td class="nutrition__value">277kcal</td>
               </tr>
               <tr class="nutrition__row">
-                <td class="nutrition__value">Carbs</td>
+                <th class="nutrition__label">Carbs</td>
                 <td class="nutrition__value">0g</td>
               </tr>
               <tr class="nutrition__row">
-                <td class="nutrition__value">Protein</td>
+                <th class="nutrition__label">Protein</td>
                 <td class="nutrition__value">20g</td>
               </tr>
               <tr class="nutrition__row">
-                <td class="nutrition__value">Fat</td>
+                <th class="nutrition__label">Fat</td>
                 <td class="nutrition__value">22g</td>
               </tr>
             </tbody>
