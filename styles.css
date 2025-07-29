@@ -47,6 +47,13 @@ body {
 
 }
 
+.section-devider{
+    border: 0;
+    height: 1px;
+    background-color: var(--colors-stone-150);
+    width: 100%;
+}
+
 
 /* header styles */
 .recipe__card {
