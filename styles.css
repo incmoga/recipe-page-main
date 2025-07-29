@@ -47,9 +47,6 @@ body {
 
 }
 
-li {
-    padding-left: 1rem;
-}
 
 /* header styles */
 .recipe__card {
@@ -67,6 +64,7 @@ li {
     width: 41rem;
     height: 18.75rem;
     border-radius: 1rem;
+
 }
 
 .recipe__title {
@@ -86,7 +84,8 @@ li {
     flex-direction: column;
     background-color: var(--colors-rose-50);
     border-radius: 1rem;
-    padding: 1.875rem;
+    padding: 1.5rem;
+    gap: 1rem;
 }
 
 .prep-time__title {
@@ -94,7 +93,41 @@ li {
     font-weight: 600;
 }
 
+.prep-time__label {
+    font-weight: 700;
+    color: var(--colors-rose-800);
+}
+
+.prep-time__list {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding-left: 1.5rem ;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.prep-time__item {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.prep-time__item::before {
+    content: "•";
+    position: absolute;
+    left: .25rem;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
 /* Section ingredients styles */
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
 .ingredients__title {
     font-family: var(--font-family-title);
     font-size: 1.75rem;
@@ -102,11 +135,35 @@ li {
     color: var(--colors-brown-800);
 }
 
-/* .prep-time__list {
+.ingredients__list {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    list-style-type: none;
+    padding-left: 0;
+}
 
-} */
+.ingredients__item {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.ingredients__item::before {
+    content: "•";
+    position: absolute;
+    left: .25rem;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+}
 
 /* Section instructions styles */
+.instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
 .instructions__title {
     font-family: var(--font-family-title);
     font-size: 1.75rem;
@@ -114,11 +171,25 @@ li {
     color: var(--colors-brown-800);
 }
 
+.instructions__list {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding-left: 2.5rem;
+    line-height: 150%;
+}
+
 .instructions__step {
     font-weight: 700;
 }
 
 /* Section nutrition styles */
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
 .nutrition__title {
     font-family: var(--font-family-title);
     font-size: 1.75rem;
@@ -133,4 +204,16 @@ li {
 .nutrition__value {
     font-weight: 700;
     color: var(--colors-brown-800);
+}
+
+.nutrition__table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.nutrition__row {
+    display: grid;
+    justify-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--colors-stone-600);
 }
