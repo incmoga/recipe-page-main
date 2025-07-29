@@ -8,17 +8,10 @@
     --colors-brown-800: hsl(14, 45%, 36%);
     --colors-rose-800: hsl(332, 51%, 32%);
     --colors-rose-50: hsl(330, 100%, 98%);
-
+    
     /* Typography */
     --font-family-content:'Outfit', sans-serif;
     --font-family-title:'Young Serif', sans-serif;
-}
-
-    /* Reset*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 @font-face {
@@ -34,14 +27,110 @@
     src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
     font-weight: 400;
 }
+/* Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family-content);
     font-size: 1rem;
+    color: var(--colors-stone-600);
     background-color: var(--colors-stone-100);
     min-height: 100vh;
     padding: 1.5rem;
 
+}
+
+li {
+    padding-left: 1rem;
+}
+
+/* header styles */
+.recipe__card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--colors-white);
+    width: clamp(23.4375rem, 90vw, 46rem);
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.recipe__image {
+    width: 41rem;
+    height: 18.75rem;
+    border-radius: 1rem;
+}
+
+.recipe__title {
+    font-family: var(--font-family-title);
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--colors-stone-900);
+}
+
+/* .recipe__description{
+    
+} */
+
+/* Section prep-time styles */
+.prep-time {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colors-rose-50);
+    border-radius: 1rem;
+    padding: 1.875rem;
+}
+
+.prep-time__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Section ingredients styles */
+.ingredients__title {
+    font-family: var(--font-family-title);
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--colors-brown-800);
+}
+
+/* .prep-time__list {
+
+} */
+
+/* Section instructions styles */
+.instructions__title {
+    font-family: var(--font-family-title);
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--colors-brown-800);
+}
+
+.instructions__step {
+    font-weight: 700;
+}
+
+/* Section nutrition styles */
+.nutrition__title {
+    font-family: var(--font-family-title);
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--colors-brown-800);
+}
+
+.nutrition__label {
+    font-weight: 400;
+}
+
+.nutrition__value {
+    font-weight: 700;
+    color: var(--colors-brown-800);
 }
