@@ -60,10 +60,19 @@ body {
     border-radius: 1.5rem;
 }
 
+.recipe__header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .recipe__image {
-    width: 41rem;
-    height: 18.75rem;
+    width: 100%;
+    height: auto;
+    max-height: 18.75rem;
     border-radius: 1rem;
+    object-fit: cover;
+    display: block;
 
 }
 
@@ -73,10 +82,6 @@ body {
     font-weight: 400;
     color: var(--colors-stone-900);
 }
-
-/* .recipe__description{
-    
-} */
 
 /* Section prep-time styles */
 .prep-time {
@@ -177,6 +182,29 @@ body {
     gap: .75rem;
     padding-left: 2.5rem;
     line-height: 150%;
+    /* counter */
+    counter-reset: instructions-counter;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.instructions__item {
+    /* counter */
+    counter-increment: instructions-counter;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.instructions__item::before {
+    content: counter(instructions-counter) "."; /* Выводим номер с точкой */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--colors-stone-600);
+    text-align: right;
 }
 
 .instructions__step {
@@ -197,6 +225,31 @@ body {
     color: var(--colors-brown-800);
 }
 
+.nutrition__table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0;
+}
+
+.nutrition__row {
+    border-bottom: .0625rem solid var(--colors-stone-150);
+    /* display: grid;
+    justify-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--colors-stone-600); */
+}
+
+.nutrition__row:last-child {
+    border-bottom: none;
+}
+.nutrition__label,
+.nutrition__value {
+    width: 50%;
+    text-align: left;
+    padding: 1rem 0;
+    padding-left: 2.5rem;
+}
+
 .nutrition__label {
     font-weight: 400;
 }
@@ -206,14 +259,4 @@ body {
     color: var(--colors-brown-800);
 }
 
-.nutrition__table {
-    border-collapse: collapse;
-    width: 100%;
-}
 
-.nutrition__row {
-    display: grid;
-    justify-items: start;
-    grid-template-columns: repeat(2, 1fr);
-    border-bottom: 1px solid var(--colors-stone-600);
-}
