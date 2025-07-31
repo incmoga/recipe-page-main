@@ -53,6 +53,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
   counter-reset: instructions-counter; /* Initialize counter */
   list-style: none;
   padding-left: 0;
+  margin-left: 0;
 }
 
 .instructions__item {
@@ -65,8 +66,11 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
   content: counter(instructions-counter) "."; /* Display number */
   position: absolute;
   left: 0;
+  top: 0;
   font-weight: 700;
+  font-size: 1rem;
   color: var(--colors-brown-800);
+  text-align: right;
 }
 ```
 This solution allowed me to create custom numbering with full control over styling and positioning.
